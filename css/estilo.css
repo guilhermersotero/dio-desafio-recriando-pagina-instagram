@@ -11,7 +11,7 @@ body{
 /*A seguir consta código css de formatação da tag main*/
 .conteudo-principal{
     width: 100%;
-    height: 750px;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,13 +19,14 @@ body{
 /*A seguir consta código css de formatação da div que possui imgs de ilustração a esquerda*/
 
 .tela-instagram-ilustracao .imagens img{
-    width: 450px;
+    width: 400px;
 }
 /*A seguir consta código css de formatação da div que possui 
 opções de login a direita*/
 .tela-instagram-acesso .obtenha-app img{
     width: 150px;
 }
+
 .tela-instagram-acesso .possui-login, form{
     display: flex;
     flex-direction: column;
@@ -43,8 +44,9 @@ opções de login a direita*/
     margin: 10px;
 }
 .possui-login img{
-    width: 200px;
-    margin: 40px auto;
+    width: 150px;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 .nao-possui-login a, .nao-possui-login p{
     font-size: 15px;
@@ -85,10 +87,10 @@ opções de login a direita*/
 }
 .login-facebook-opcao::before{
     content: "⠀⠀";
-    background: url("img/icon-fb.png");
+    background-image: url("../img/icon-fb.png");
     width: 15px;
     height: 15px;
-    background-size: 18px 18px;
+    background-size: 15px 15px;
     margin: 0px 6px 0 0;
 }
 .login-facebook-senha{
@@ -103,6 +105,9 @@ opções de login a direita*/
 .obtenha-app{
     text-align: center;
     padding: 10px;
+}
+.obtenha-app p{
+    margin: 10px;
 }
 .obtenha-app .plataforma{
     padding: 15px;
@@ -132,10 +137,51 @@ opções de login a direita*/
     margin: 20px;
 }
 /*Media queries*/
-@media (max-width: 768px){
+@media (min-width: 2560px){
+    .conteudo-principal{
+        height: 1093px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
-@media (max-width: 767px){
+@media (max-width: 800px){
     .tela-instagram-ilustracao{
         display: none;
+    }
+}
+@media (max-width: 767px){
+    
+    .tela-instagram-ilustracao{
+        display: none;
+    }
+}
+@media (max-width: 425px){
+    body{
+        background-color: white;
+    }
+    .possui-login, .nao-possui-login{
+        background-color: white;
+        border: 1px solid rgb(255, 255, 255);
+        margin: 10px;
+    }
+    .possui-login form .email, .possui-login form .senha{
+        border: 1px solid rgb(180, 180, 180);
+        background-color: rgb(255, 255, 255);
+    }
+}
+@media (max-width: 320px){
+    .obtenha-app .plataforma a img{
+        width: 120px;
+    }
+    .rodape{
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .rodape a, .copyright p{
+        text-align: center;
+        font-size: 12px;
+        padding: 0;
     }
 }
